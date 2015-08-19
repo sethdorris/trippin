@@ -1,7 +1,11 @@
 define(function (require) {
+	//Dependencies
 	var $ = require("jquery");
+	
+	//Module level variable
 	var visited = false;
 
+	//Event Handlers
 	$("#visited").click(function () {
 		visited = true;
 	});
@@ -16,9 +20,8 @@ define(function (require) {
 			location_type: $("#locationType").val() || "city",
 			visited: visited
 		};
-
-		console.log(newLocation);
-
+		
+		//Posting data to Firebase
 		$.ajax({
 			url: "https://nss-seth-trippin.firebaseio.com/trips.json",
 			method: "POST",
