@@ -10,8 +10,30 @@
 
 <body>
 
+  <div id="list-of-trips"></div>
 
-  
+  <div class="container-fluid">
+
+      <div class="row">
+        <div class="col-md-12" id="addform">
+            <form id="addlocation">
+              <label for="locationName">Location Name: </label>
+              <input type="text" placeholder="Location Name" id="locationName"></input><br>
+              <label for="locationType">Location Type: </label>
+              <input type="text" placeholder="State/Province/Country" id="locationType"></input></br>
+              <label for="review">Review:</label>
+              <textarea placeholder="This trip was awesome" id="review"></textarea><br>
+            </form>
+            <div class="btn-group">
+              <button class="btn" id="visited">Visited</button>
+              <button class="btn" id="wishList">Wishlist</button>
+            </div>
+            <button id="addLocation">Add Location</button>
+        </div>
+      </div>
+
+  </div>
+
  
   <script data-main="javascripts/main" 
           src="lib/bower_components/requirejs/require.js"></script>

@@ -4,7 +4,7 @@
 		"location": "test",
 		"location_type": "city",
 		"visited": false,
-		"reviews:": [
+		"reviews": [
 			{
 			"date": "now",
 			"text": "I loved it",

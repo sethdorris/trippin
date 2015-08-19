@@ -1,0 +1,13 @@
+{{#each this}}
+
+	<div>
+		{{location}}
+	</div>
+	<div>
+		<!-- Displays each array item contained within the review key -->
+		{{#each reviews}}
+			<span>{{title}}</span> | <span>{{date}}</span>
+		{{/each}}
+	</div>
+
+{{/each}}
