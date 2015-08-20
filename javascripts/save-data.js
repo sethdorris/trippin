@@ -17,7 +17,7 @@ define(function (require) {
 	$("#addLocation").click(function () {
 		var newLocation = {
 			location: $("#locationName").val(),
-			location_type: $("#locationType").val() || "city",
+			location_type: $("#locationType").val(),
 			visited: visited
 		};
 		

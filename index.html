@@ -17,12 +17,14 @@
       <div class="row">
         <div class="col-md-12" id="addform">
             <form id="addlocation">
-              <label for="locationName">Location Name: </label>
-              <input type="text" placeholder="Location Name" id="locationName"></input><br>
-              <label for="locationType">Location Type: </label>
-              <input type="text" placeholder="State/Province/Country" id="locationType"></input></br>
-              <label for="review">Review:</label>
-              <textarea placeholder="This trip was awesome" id="review"></textarea><br>
+              <div>
+                <label for="locationName">Location Name: </label><br>
+                <input type="text" placeholder="Location Name" id="locationName"></input><br>
+              </div>
+              <div>
+                <label for="locationType">Location Type: </label><br>
+                <select id="locationType"></select>
+              </div>
             </form>
             <div class="btn-group">
               <button class="btn" id="visited">Visited</button>
@@ -34,7 +36,12 @@
 
   </div>
 
- 
+              <div class="reviewEntry">
+                <label for="review" class="reviewEntry">Review:</label>
+                <textarea placeholder="This trip was awesome" id="reviewEntry" class="reviewEntry"></textarea><br>
+                <button id="saveReview">Save Review</button>
+              </div>
+
   <script data-main="javascripts/main" 
           src="lib/bower_components/requirejs/require.js"></script>
 </body>
