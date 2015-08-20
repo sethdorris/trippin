@@ -10,9 +10,15 @@
 
 <body>
 
-  <div id="list-of-trips"></div>
+
+
 
   <div class="container-fluid">
+
+  <div class="row">
+      <div id="list-of-trips" class="col-md-6"></div>
+      <div id="wishlist" class="col-md-6"></div>
+  </div>
 
       <div class="row">
         <div class="col-md-12" id="addform">
@@ -36,11 +42,6 @@
 
   </div>
 
-              <div class="reviewEntry">
-                <label for="review" class="reviewEntry">Review:</label>
-                <textarea placeholder="This trip was awesome" id="reviewEntry" class="reviewEntry"></textarea><br>
-                <button id="saveReview">Save Review</button>
-              </div>
 
   <script data-main="javascripts/main" 
           src="lib/bower_components/requirejs/require.js"></script>

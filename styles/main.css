@@ -1,4 +1,10 @@
 .reviewEntry {
   display: none; }
 
+#wishlist {
+  border: 1px solid red; }
+
+ul {
+  list-style-type: none; }
+
 /*# sourceMappingURL=main.css.map */

@@ -17,13 +17,15 @@ define(function (require) {
 
     myFirebase.child("trips").on("value", function(snapshot) {
       var trips = snapshot.val();
-      console.log(trips);
+      console.log("trips", trips);
 
 	//This will hold the complete DOM string of trips
-      var populatedTemplate = templates.tripTemplate(trips);
+      var populateVisitedTemplate = templates.tripTemplate(trips);
+      var populateWishlistTemplate = templates.wishlistTemplate(trips);
       
 	//Insert the DOM string into the appropriate element
-      $("#list-of-trips").html(populatedTemplate);
+      $("#list-of-trips").html(populateVisitedTemplate);
+      $("#wishlist").html(populateWishlistTemplate);
     });
 
 });

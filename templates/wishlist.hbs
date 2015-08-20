@@ -1,0 +1,19 @@
+<h1>My Wishlist of Places to See</h1>
+
+{{#each this}}
+	
+	{{#unless visited}}
+		
+		<ul class="thumbnails">
+		  <li class="span4">
+		    <div class="thumbnail">
+		      <img data-src="holder.js/300x200" alt="">
+		      <h3>{{location}}</h3>
+		      <p>{{location_type}}</p>
+		    </div>
+		  </li>
+		</ul>
+
+	{{/unless}}
+
+{{/each}}

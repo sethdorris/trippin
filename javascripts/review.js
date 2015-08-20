@@ -8,16 +8,29 @@ define(function (require) {
 	$(document).on("click", "button[id^='add-review#']", function() {
 		selectedID = $(this).attr("id").split("#")[1];
 		$(".reviewEntry").toggle();
+		$(this).hide();
 	});
 
-	$("#saveReview").click(function () {
+	$(document).on("click", "#saveReview", function () {
 		var tripRef = new Firebase("https://nss-seth-trippin.firebaseio.com/trips/" + selectedID);
 
 		console.log("FUCK");
 
+		var date = new Date();
+		var day = date.getDate();
+		var month = date.getMonth();
+
+		switch (month) {
+			case 7:
+			month = "August";
+			break;
+		}
+
+		console.log(month);
+
 		tripRef.child("reviews").push({
-			date: Date.now(),
-			text: $("#reviewEntry").text(),
+			date: month + " " + date.getDate(),
+			text: $("#reviewEntry").val(),
 			title: "Title"
 		});
 	});
